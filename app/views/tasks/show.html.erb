@@ -1,0 +1,8 @@
+<h1> This is info page for <%= @task.title %></h1>
+
+<p> Details: <%= @task.details %></p>
+<p> Completed: <%= @task.completed %> </p>
+<%= link_to "Update existing task",task_edit_path %>
+<%= link_to "Back to index", tasks_path %>
+<%= link_to "Delete this task",task_delete_path, method: :delete %>
+

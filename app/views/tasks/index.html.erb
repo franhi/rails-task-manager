@@ -3,7 +3,9 @@
 <div>
 <ul>
 <% @tasks.each do |task| %>
-<li> <%= link_to task.title, task_path(task) %> (Task: <%= task.title %>, Details: <%= task.details %>, Completed? <%= task.completed %>)- <%= link_to "Update this task",task_edit_path(task) %> -<%= link_to "Delete this task",task_delete_path(task), method: :delete %></li>
+<li> <input name="task" type="checkbox" value="" <% "checked" if task.completed %>>
+  <%= link_to task.title, task_path(task) %> (Task: <%= task.title %>, Details: <%= task.details %>)-<%= link_to "Update this task",task_edit_path(task) %> -<%= link_to "Delete this task",task_delete_path(task), method: :delete %>
+</li>
 <% end %>
 </div>
 
